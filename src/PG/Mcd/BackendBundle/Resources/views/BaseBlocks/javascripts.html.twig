@@ -1,0 +1,22 @@
+{% block javascripts %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+
+    <script src="/bundles/bolaevo/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="/bundles/bolaevo/sb-admin/js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    {#
+    <script src="/bundles/bolaevo/sb-admin/js/plugins/morris/raphael.min.js"></script>
+    <script src="/bundles/bolaevo/sb-admin/js/plugins/morris/morris.min.js"></script>
+    <script src="/bundles/bolaevo/sb-admin/js/plugins/morris/morris-data.js"></script>
+    #}
+    <script src="/bundles/bolaevo/bower_components/angularjs/angular.min.js"></script>
+    <script src="/bundles/bolaevo/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bundles/bolaevo/evo-app/module.js"></script>
+    <script src="/bundles/bolaevo/evo-app/Controller/baseController.js"></script>
+    <script src="/bundles/bolaevo/evo-app/Controller/AdminCategoriesCtrl.js"></script>
+    <script src="/bundles/bolaevo/evo-app/routes.js"></script>
+ 
+{% endblock %}

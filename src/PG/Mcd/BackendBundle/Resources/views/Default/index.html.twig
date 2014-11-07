@@ -1,1 +1,25 @@
-Hello {{ name }}!
+<!DOCTYPE html>
+<html lang="en" ng-app="MainModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bola-Finanzas</title>
+    {% include('BolaEvoBundle:BaseBlocks:stylesheets.html.twig') %}
+</head>
+<body ng-controller="baseController">
+    <div id="wrapper">
+        {[{ saludo }]}
+        {% include('BolaEvoBundle:BaseBlocks:navigation.html.twig') %}
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                {% include('BolaEvoBundle:BaseBlocks:navigation.html.twig') %}
+                <div ng-view></div>
+            </div>
+        </div>
+        {% include('BolaEvoBundle:BaseBlocks:javascripts.html.twig') %}
+    </div>
+</body>
+</html>

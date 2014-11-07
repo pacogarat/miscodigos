@@ -1,0 +1,11 @@
+# Oct 15, 2014 v 1.2
+
+* [Added] AngularJS version of Xenon Theme
+
+* [Fix] Bug fixes and code improvements
+
+
+# Oct 10, 2014 v 1.1
+
+* [Added] PSD Files of Xenon Layout (2 psd files)
+

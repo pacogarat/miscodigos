@@ -1,0 +1,80 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="col-md-6 panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Crear categoría</h3>
+				<div class="panel-options">
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			<div class="panel-body">
+                            <div>
+                                <div class="col-md-12">
+                                    <input class="form-control" ng-model="new_category.query"/>
+                                    <br>
+                                    <span style="display:block; float:right;">{{new_category.concepts.length}} coincidencias</span>
+                                </div>
+                                <div data-max-height="400" class="col-md-12 scrollable">
+                                    <table  class="table table-bordered table-striped">
+                                        <tbody>
+                                            <tr ng-repeat="concept in new_category.concepts">
+                                                <td>{{concept.concepto}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+                <div class="col-md-5 col-md-offset-1 panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Gastos sobre el total</h3>
+				<div class="panel-options">
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			<div class="panel-body">	
+                            <div id="bar-selected"></div>
+                        </div>
+                </div>
+            
+            	<div class="col-md-12 panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Categorizar conceptos</h3>
+				<div class="panel-options">
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			<div class="panel-body">	
+                            <div class="col-md-6" ng-init="init()" class="form-group">
+                                <label class="control-label">Conceptos</label> 
+                                <div select2 multiple model="concepts.evo" path="{{$parent.config.routes.concept.select2}}"></div>
+                            </div>
+                            <div class="col-md-6" ng-init="init()" class="form-group">
+                                <label class="control-label">Categoría</label> 
+                                <div select2 multiple model="concepts.evo" path="{{$parent.config.routes.concept.select2}}"></div>
+                            </div>
+			</div>
+		</div>
+			
+	</div>
+</div>
