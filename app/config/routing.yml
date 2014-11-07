@@ -1,3 +1,10 @@
+login:
+    path:     /login
+    defaults: { _controller: PGMcdFrontendBundle:Security:login }
+    
+login_check:
+    path: /login_check
+    
 pg_mcd_frontend:
     resource: "@PGMcdFrontendBundle/Controller/"
     type:     annotation
