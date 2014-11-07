@@ -1,2 +1,27 @@
+pg_mcd_model:
+    resource: "@PGMcdModelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+pg_mcd_rest_external:
+    resource: "@PGMcdRestExternalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+pg_mcd_entity:
+    resource: "@PGMcdEntityBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+pg_mcd_frontend:
+    resource: "@PGMcdFrontendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+pg_mcd_backend:
+    resource: "@PGMcdBackendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

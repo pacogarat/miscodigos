@@ -19,6 +19,11 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Misd\GuzzleBundle\MisdGuzzleBundle(),
+            new PG\Mcd\BackendBundle\PGMcdBackendBundle(),
+            new PG\Mcd\FrontendBundle\PGMcdFrontendBundle(),
+            new PG\Mcd\EntityBundle\PGMcdEntityBundle(),
+            new PG\Mcd\RestExternalBundle\PGMcdRestExternalBundle(),
+            new PG\Mcd\ModelBundle\PGMcdModelBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
