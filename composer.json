@@ -19,11 +19,11 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/jsrouting-bundle": "~1.5",
+        "sensio/generator-bundle": "~2.3",
         "jms/serializer-bundle": "~0.13",
         "misd/guzzle-bundle": "~1.1"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
     },
     "scripts": {
         "post-root-package-install": [
