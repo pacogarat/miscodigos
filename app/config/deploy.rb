@@ -24,7 +24,9 @@ set :model_manager, "doctrine"
 role :web,        domain                         # Your HTTP server, Apache/etc
 role :app,        domain, :primary => true       # This may be the same as your `Web` server
 
+set :writable_dirs,     ["app/cache", "app/logs"]
 set  :keep_releases,  3
 set :shared_files,      ["app/config/parameters.yml"]
 set :shared_children,   [app_path + "/logs", web_path + "/uploads", "vendor"]
+
 logger.level = Logger::MAX_LEVEL
