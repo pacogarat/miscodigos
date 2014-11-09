@@ -45,6 +45,7 @@ php_value date.timezone "Europe/Madrid"
 
     # Rewrite all other queries to the front controller.
     RewriteRule .? %{ENV:BASE}/app.php [L]
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>

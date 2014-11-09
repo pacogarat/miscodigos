@@ -13,7 +13,7 @@ pg_mcd_frontend:
 pg_mcd_backend:
     resource: "@PGMcdBackendBundle/Controller/"
     type:     annotation
-    prefix:   /dashboard/
+    prefix:   /admin
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

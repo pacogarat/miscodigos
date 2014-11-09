@@ -3,6 +3,7 @@ set :domain,      "pacogarat.com"
 set :deploy_to,   "/var/www/miscodigos"
 set :app_path,    "app"
 
+
 set :user,        "pacogarat"
 set :use_sudo,     false
 
