@@ -13,6 +13,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->redirect("/dashboard/index.html");
+        return $this->redirect("/app/dashboard-variant-1");
     }
 }

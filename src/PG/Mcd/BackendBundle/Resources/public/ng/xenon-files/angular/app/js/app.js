@@ -26,9 +26,9 @@ app.run(function()
 });
 
 
-app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASSETS){
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ocLazyLoadProvider, ASSETS){
 	
-	$urlRouterProvider.otherwise('/app/dashboard-variant-1');
+        $urlRouterProvider.otherwise('/app/dashboard-variant-1');
 	
 	$stateProvider.
                 state('app', {
