@@ -1,6 +1,11 @@
+pg_mcd_voucher:
+    resource: "@PGMcdVoucherBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 login:
     path:     /login
-    defaults: { _controller: PGMcdFrontendBundle:Security:login }
+    defaults: { _controller: PGMcdBackendBundle:Security:loginRedirect }
     
 login_check:
     path: /login_check

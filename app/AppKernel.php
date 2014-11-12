@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new PG\Mcd\EntityBundle\PGMcdEntityBundle(),
             new PG\Mcd\RestExternalBundle\PGMcdRestExternalBundle(),
             new PG\Mcd\ModelBundle\PGMcdModelBundle(),
+            new PG\Mcd\VoucherBundle\PGMcdVoucherBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

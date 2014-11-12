@@ -1,6 +1,6 @@
 <?php
 
-namespace PG\Mcd\BackendBundle\Controller;
+namespace PG\Mcd\VoucherBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,10 +9,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/hello/{name}")
+     * @Template()
      */
-    public function indexAction()
+    public function indexAction($name)
     {
-        return $this->redirect("/dashboard/home");
+        return array('name' => $name);
     }
 }

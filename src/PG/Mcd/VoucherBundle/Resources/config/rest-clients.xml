@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="tradedoubler.coupons.client" class="%guzzle.client.class%">
+            <tag name="guzzle.client"/>
+           <call method="setDescription">
+                <argument type="service" id="tradedoubler.coupons.service_description"/>
+            </call>
+        </service>
+        <service id="tradedoubler.coupons.service_description"
+                class="%guzzle.service_description.class%"
+                factory-class="%guzzle.service_description.class%"
+                factory-method="factory">
+           <argument>%tradedoubler.coupons.service_description.file%</argument>
+       </service>
+    </services>
+</container>
+<!--
+maxStartDate	
+minEndDate	
+dateOutputFormat
+programId
+keywords
+voucherTypeId
+siteSpecific
+pageSize
+page
+random-->

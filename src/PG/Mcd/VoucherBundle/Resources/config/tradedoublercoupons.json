@@ -1,0 +1,36 @@
+{
+    "name": "Coupons",
+    "apiVersion": "1.0",
+    "baseUrl": "https://api.tradedoubler.com",
+    "description": "Coupons API",
+    "operations": {
+        "GetCoupons": {
+            "httpMethod": "GET",
+            "uri": "/1.0/vouchers.{type};id={id}?token={token}",
+            "summary": "Gets a list of Products",
+            "parameters": {
+                "type": {
+                    "location": "uri",
+                    "description": "Type of response",
+                    "default": "json"
+                },
+                "token": {
+                    "location": "uri",
+                    "description": "Type of response",
+                    "default": "935192663FCF6DA673DB3AFC58BA4E5775B66515"
+                },
+                "id": {
+                    "location": "uri",
+                    "description": "Type of response",
+                    "required": false,
+                    "filters": [
+                        {
+                            "method": "PG\\Mcd\\VoucherBundle\\Model\\TradedoublerAPI::convertString",
+                            "args": [ "@value", "@api" ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

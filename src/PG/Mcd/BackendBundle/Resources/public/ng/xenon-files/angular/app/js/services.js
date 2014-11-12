@@ -97,9 +97,9 @@ angular.module('xenon.services', []).
 				
 				
 				// Subitems of Gastos
-                                gastos.addItem('evo', 	'/app/gastos/evo'); // "-/" will append parents link
+                                gastos.addItem('evo', 	'/dashboard/gastos/evo'); // "-/" will append parents link
 				
-				// Subitems of Dashboard
+                                // Subitems of Dashboard
                                 dashboard.addItem('Dashboard 1', 	'-/variant-1'); // "-/" will append parents link
 				dashboard.addItem('Dashboard 2', 	'-/variant-2');
 				dashboard.addItem('Dashboard 3', 	'-/variant-3');

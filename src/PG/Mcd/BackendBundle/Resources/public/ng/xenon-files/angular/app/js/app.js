@@ -28,12 +28,12 @@ app.run(function()
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ocLazyLoadProvider, ASSETS){
 	
-        $urlRouterProvider.otherwise('/app/dashboard-variant-1');
+        $urlRouterProvider.otherwise('/dashboard/home');
 	
 	$stateProvider.
                 state('app', {
 			abstract: true,
-			url: '/app',
+			url: '/dashboard',
 			templateUrl: appHelper.templatePath('layout/app-body'),
 			controller: function($rootScope){
 				$rootScope.isLoginPage        = false;
@@ -131,7 +131,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ocLa
 		}).
 		// Dashboards
 		state('app.dashboard-variant-1', {
-			url: '/dashboard-variant-1',
+			url: '/home',
 			templateUrl: appHelper.templatePath('dashboards/variant-1'),
 			resolve: {
 				resources: function($ocLazyLoad){
