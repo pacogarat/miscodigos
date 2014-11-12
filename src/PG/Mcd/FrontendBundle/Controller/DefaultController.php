@@ -15,6 +15,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        //$request->getQuery()->useUrlEncoding(false);
         $client = $this->get('tradedoubler.coupons.client');
         //$client = new Client();
         $response = $client->getCommand('GetCoupons', array('id'=>152739))->execute();

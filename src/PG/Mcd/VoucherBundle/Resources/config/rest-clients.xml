@@ -7,9 +7,9 @@
     <services>
         <service id="tradedoubler.coupons.client" class="%guzzle.client.class%">
             <tag name="guzzle.client"/>
-           <call method="setDescription">
-                <argument type="service" id="tradedoubler.coupons.service_description"/>
-            </call>
+            <call method="setDescription">
+                 <argument type="service" id="tradedoubler.coupons.service_description"/>
+             </call>
         </service>
         <service id="tradedoubler.coupons.service_description"
                 class="%guzzle.service_description.class%"
