@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Guzzle\Service\Client;
+use Guzzle\Service\Command\OperationCommand;
 
 class DefaultController extends Controller
 {
@@ -15,10 +16,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        //$request->getQuery()->useUrlEncoding(false);
         $client = $this->get('tradedoubler.coupons.client');
-        //$client = new Client();
-        $response = $client->getCommand('GetCoupons', array('id'=>152739))->execute();
+        $command = $client->getCommand('GetCoupons', array('id'=>152843));
+        $response = $command->execute();
         var_dump($response);die();
         return array();
     }

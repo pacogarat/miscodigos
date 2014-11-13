@@ -6,7 +6,7 @@
     "operations": {
         "GetCoupons": {
             "httpMethod": "GET",
-            "uri": "/1.0/vouchers.{type};id={id}?token={token}",
+            "uri": "/1.0/vouchers.{type}{;id}?token={token}",
             "summary": "Gets a list of Products",
             "parameters": {
                 "type": {
@@ -22,13 +22,7 @@
                 "id": {
                     "location": "uri",
                     "description": "Type of response",
-                    "required": false,
-                    "filters": [
-                        {
-                            "method": "PG\\Mcd\\VoucherBundle\\Model\\TradedoublerAPI::convertString",
-                            "args": [ "@value", "@api" ]
-                        }
-                    ]
+                    "required": false
                 }
             }
         }
